@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설교 인포그래픽: 한 가지만이라도 족하니라</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- React & ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@400;700&display=swap');
+        body { 
+            font-family: 'Noto Sans KR', sans-serif; 
+            background-color: #f8fafc;
+        }
+        .font-serif { font-family: 'Noto Serif KR', serif; }
+        .infographic-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function App() {
+            return (
+                <div className="infographic-container my-10 rounded-3xl overflow-hidden text-slate-800">
+                    {/* Header Section */}
+                    <header className="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-12 text-center relative overflow-hidden">
+                        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                            <i className="fa-solid fa-cross text-[20rem] absolute -top-20 -right-20 transform rotate-12"></i>
+                        </div>
+                        <div className="relative z-10">
+                            <p className="text-amber-400 font-medium tracking-widest mb-4 text-sm uppercase">2026. 03. 01 주일예배 설교 브리핑</p>
+                            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 leading-tight">
+                                한 가지만이라도<br/>족하니라
+                            </h1>
+                            <div className="flex items-center justify-center space-x-4 text-slate-300">
+                                <span className="flex items-center"><i className="fa-solid fa-book-bible mr-2"></i>누가복음 10:37~42</span>
+                                <span>|</span>
+                                <span className="flex items-center"><i className="fa-solid fa-church mr-2"></i>부천주사랑교회</span>
+                            </div>
+                        </div>
+                    </header>
+
+                    {/* Section 1: The Trap of Busyness */}
+                    <section className="p-10 border-b border-slate-100">
+                        <div className="text-center mb-10">
+                            <span className="bg-rose-100 text-rose-600 px-3 py-1 rounded-full text-sm font-bold tracking-wide mb-3 inline-block">THE PROBLEM</span>
+                            <h2 className="text-3xl font-bold text-slate-800">마르다의 함정 : 분주함</h2>
+                            <p className="text-slate-500 mt-2">좋은 의도로 시작한 행함이 '분수에 넘칠 때' 발생하는 결과</p>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div className="bg-slate-50 rounded-2xl p-6 text-center border border-slate-100">
+                                <div className="w-16 h-16 mx-auto bg-rose-100 text-rose-500 rounded-full flex items-center justify-center text-2xl mb-4">
+                                    <i className="fa-solid fa-hourglass-end"></i>
+                                </div>
+                                <h3 className="font-bold text-lg mb-2">한계 직면</h3>
+                                <p className="text-sm text-slate-600">시간 부족과 예상치 못한 변수로 인해 마음의 여유를 상실합니다.</p>
+                            </div>
+                            <div className="bg-slate-50 rounded-2xl p-6 text-center border border-slate-100">
+                                <div className="w-16 h-16 mx-auto bg-rose-100 text-rose-500 rounded-full flex items-center justify-center text-2xl mb-4">
+                                    <i className="fa-solid fa-bolt"></i>
+                                </div>
+                                <h3 className="font-bold text-lg mb-2">원망과 공격</h3>
+                                <p className="text-sm text-slate-600">수고를 알아주지 않는 상황과 주님을 향해 공격적인 태도를 보입니다.</p>
+                            </div>
+                            <div className="bg-slate-50 rounded-2xl p-6 text-center border border-slate-100">
+                                <div className="w-16 h-16 mx-auto bg-rose-100 text-rose-500 rounded-full flex items-center justify-center text-2xl mb-4">
+                                    <i className="fa-solid fa-link-slash"></i>
+                                </div>
+                                <h3 className="font-bold text-lg mb-2">생명의 단절</h3>
+                                <p className="text-sm text-slate-600">주님을 사랑해서 시작한 일이 오히려 관계를 해치는 역설이 발생합니다.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Section 2: Comparison */}
+                    <section className="p-10 bg-slate-50">
+                        <div className="text-center mb-10">
+                            <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-bold tracking-wide mb-3 inline-block">COMPARISON</span>
+                            <h2 className="text-3xl font-bold text-slate-800">두 가지 길 : 생명 vs 탈진</h2>
+                        </div>
+
+                        <div className="flex flex-col md:flex-row gap-6">
+                            {/* Good Samaritan */}
+                            <div className="flex-1 bg-white rounded-2xl p-8 shadow-sm border border-teal-100 border-t-4 border-t-teal-500">
+                                <div className="text-teal-600 font-bold text-xl mb-6 flex items-center">
+                                    <i className="fa-solid fa-hand-holding-heart mr-3 text-2xl"></i>선한 사마리아인
+                                </div>
+                                <ul className="space-y-4">
+                                    <li className="flex items-start"><i className="fa-solid fa-check text-teal-500 mt-1 mr-3"></i><span className="text-slate-700"><strong>태도:</strong> 조용하고 여유로움</span></li>
+                                    <li className="flex items-start"><i className="fa-solid fa-check text-teal-500 mt-1 mr-3"></i><span className="text-slate-700"><strong>조절:</strong> 자신의 한계를 인정하고 적절히 행함</span></li>
+                                    <li className="flex items-start"><i className="fa-solid fa-check text-teal-500 mt-1 mr-3"></i><span className="text-slate-700"><strong>타인:</strong> 불쌍히 여기는 마음 (여유)</span></li>
+                                </ul>
+                                <div className="mt-6 p-4 bg-teal-50 rounded-xl text-teal-800 text-center font-bold">
+                                    생명을 흘려보냄 (자비)
+                                </div>
+                            </div>
+
+                            {/* VS Badge */}
+                            <div className="hidden md:flex items-center justify-center">
+                                <div className="bg-slate-200 text-slate-500 rounded-full w-10 h-10 flex items-center justify-center font-bold">VS</div>
+                            </div>
+
+                            {/* Martha */}
+                            <div className="flex-1 bg-white rounded-2xl p-8 shadow-sm border border-rose-100 border-t-4 border-t-rose-500">
+                                <div className="text-rose-600 font-bold text-xl mb-6 flex items-center">
+                                    <i className="fa-solid fa-person-running mr-3 text-2xl"></i>분주한 마르다
+                                </div>
+                                <ul className="space-y-4">
+                                    <li className="flex items-start"><i className="fa-solid fa-xmark text-rose-500 mt-1 mr-3"></i><span className="text-slate-700"><strong>태도:</strong> 분주하고 급함</span></li>
+                                    <li className="flex items-start"><i className="fa-solid fa-xmark text-rose-500 mt-1 mr-3"></i><span className="text-slate-700"><strong>조절:</strong> 분수에 넘치게 과한 일을 감당하려 함</span></li>
+                                    <li className="flex items-start"><i className="fa-solid fa-xmark text-rose-500 mt-1 mr-3"></i><span className="text-slate-700"><strong>타인:</strong> 동생과 예수님을 원망함</span></li>
+                                </ul>
+                                <div className="mt-6 p-4 bg-rose-50 rounded-xl text-rose-800 text-center font-bold">
+                                    마음이 지치고 뒤틀림 (탈진)
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Section 3: The Core - Connection */}
+                    <section className="p-10 relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-amber-100 rounded-full blur-3xl opacity-50 -mr-20 -mt-20 pointer-events-none"></div>
+                        <div className="text-center mb-12 relative z-10">
+                            <span className="bg-amber-100 text-amber-600 px-3 py-1 rounded-full text-sm font-bold tracking-wide mb-3 inline-block">CORE PRINCIPLE</span>
+                            <h2 className="text-3xl font-bold text-slate-800 mb-4">예수님과의 연결 (Connection)</h2>
+                            <p className="text-slate-600 max-w-lg mx-auto bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+                                단순히 일을 줄이는 것이 아닙니다.<br/>
+                                <strong className="text-amber-600">"지금 이 순간 예수님이 원하시는 것이 무엇인가?"</strong>를<br/>
+                                묻는 마음의 태도이자 기준의 변화입니다.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+                            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-1 transition-transform">
+                                <div className="text-amber-500 text-3xl mb-4"><i className="fa-solid fa-sliders"></i></div>
+                                <h3 className="font-bold text-lg mb-2">분량 조절</h3>
+                                <p className="text-sm text-slate-600">과하지도 부족하지도 않은, 적절한 헌신의 분량을 찾게 됩니다.</p>
+                            </div>
+                            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-1 transition-transform">
+                                <div className="text-amber-500 text-3xl mb-4"><i className="fa-solid fa-seedling"></i></div>
+                                <h3 className="font-bold text-lg mb-2">생명력 공유</h3>
+                                <p className="text-sm text-slate-600">많이 움직여서가 아니라, 깊이 연결될 때 비로소 생명이 흐릅니다.</p>
+                            </div>
+                            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-1 transition-transform">
+                                <div className="text-amber-500 text-3xl mb-4"><i className="fa-solid fa-mug-hot"></i></div>
+                                <h3 className="font-bold text-lg mb-2">안식과 평안</h3>
+                                <p className="text-sm text-slate-600">주님께 인생의 짐을 맡김으로써 영혼의 진정한 쉼을 얻습니다.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Section 4: Action Guidelines */}
+                    <section className="p-10 bg-slate-800 text-white">
+                        <div className="text-center mb-10">
+                            <h2 className="text-3xl font-bold mb-2">2026 실천 지침</h2>
+                            <p className="text-slate-400">생명력 있는 한 해를 위한 3가지 액션 플랜</p>
+                        </div>
+
+                        <div className="space-y-4">
+                            <div className="bg-slate-700/50 p-6 rounded-2xl flex items-start">
+                                <div className="bg-slate-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl shrink-0 mr-6">1</div>
+                                <div>
+                                    <h3 className="text-xl font-bold mb-2 text-white">말씀 앞에 앉기 (마리아의 선택)</h3>
+                                    <p className="text-slate-300">하루 5분이라도 말씀을 읽고 묵상하는 습관을 가져야 합니다. 잠언 읽기, 성경 암송 등으로 영적 되새김질을 생활화하세요.</p>
+                                </div>
+                            </div>
+                            <div className="bg-slate-700/50 p-6 rounded-2xl flex items-start">
+                                <div className="bg-slate-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl shrink-0 mr-6">2</div>
+                                <div>
+                                    <h3 className="text-xl font-bold mb-2 text-white">질문을 통한 인도함 받기</h3>
+                                    <p className="text-slate-300">사역이나 일상에서 <span className="text-amber-400">"주님, 제가 어느 정도 하길 원하십니까?"</span>라고 끊임없이 질문하며 인정 욕구를 내려놓으세요.</p>
+                                </div>
+                            </div>
+                            <div className="bg-slate-700/50 p-6 rounded-2xl flex items-start">
+                                <div className="bg-slate-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl shrink-0 mr-6">3</div>
+                                <div>
+                                    <h3 className="text-xl font-bold mb-2 text-white">창조적인 사역 수행</h3>
+                                    <p className="text-slate-300">프로그램을 늘리는 대신, 주님과 연결된 상태에서 교회의 핵심 가치에 집중하는 단순하고 선명한 사역으로 나아가세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Footer / Quotes */}
+                    <footer className="p-10 bg-amber-50 text-center">
+                        <i className="fa-solid fa-quote-left text-4xl text-amber-200 mb-6 block"></i>
+                        <p className="text-xl md:text-2xl font-serif text-slate-800 font-bold leading-relaxed max-w-2xl mx-auto">
+                            "많이 움직인다고 생명이 생기는 것이 아닙니다.<br/>
+                            <span className="text-amber-600">깊이 연결되면 적게 움직여도 생명이 흐릅니다.</span>"
+                        </p>
+                        <p className="mt-6 text-sm text-slate-500">
+                            우리의 인생이 분주함으로 점철된 삶이 아니라,<br/>
+                            '예수 인도하셨네'라고 고백할 수 있는 삶이 되기를 원합니다.
+                        </p>
+                    </footer>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
